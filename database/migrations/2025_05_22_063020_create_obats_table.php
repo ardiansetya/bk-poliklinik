@@ -11,12 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('periksas', function (Blueprint $table) {
+        Schema::create('obats', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('id_janji_periksa')->constrained('janji_periksas')->onDelete('cascade');
-            $table->dateTime('tgl_periksa');
-            $table->text('catatan');
-            $table->integer('biaya_periksa');
+            $table->string('nama_obat', 100);
+            $table->string('kemasan');
+            $table->integer('harga');
             $table->timestamps();
         });
     }
@@ -26,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('periksas');
+        Schema::dropIfExists('obats');
     }
 };
