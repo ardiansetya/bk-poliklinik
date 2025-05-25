@@ -22,7 +22,6 @@ class UserSeeder extends Seeder
             'no_hp' => '081234567890',
             'no_rm' => 'RM001',
             'poli' => 'Umum',
-            'email' => 'dokter@example.com',
             'password' => Hash::make('password'),
             'role' => 'dokter',
         ]);
@@ -35,7 +34,6 @@ class UserSeeder extends Seeder
             'no_hp' => '089876543210',
             'no_rm' => 'RM002',
             'poli' => 'Gigi',
-            'email' => 'pasien@example.com',
             'password' => Hash::make('password'),
             'role' => 'pasien',
         ]);
